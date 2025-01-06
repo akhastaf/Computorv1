@@ -2,6 +2,7 @@
 # define SOLVER_HPP
 
 #include <map>
+#include "Math.hpp"
 #include <iostream>
 
 namespace ft {
@@ -89,11 +90,11 @@ namespace ft {
                 std::cout << (-b / (2 * a)) << std::endl;
             } else if (delta > 0) {
                 std::cout << "Discriminant is strictly positive, the two solutions are:" << std::endl;
-                std::cout << ((-b - std::sqrt(delta)) / (2 * a)) << std::endl;
-                std::cout << ((-b + std::sqrt(delta)) / (2 * a)) << std::endl;
+                std::cout << ((-b - ft::sqrt(delta)) / (2 * a)) << std::endl;
+                std::cout << ((-b + ft::sqrt(delta)) / (2 * a)) << std::endl;
             } else {
                 double realPart = (b * -1) / (2 * a);
-                double imaginaryPart = std::sqrt(-delta) / (2 * a);
+                double imaginaryPart = ft::sqrt(-delta) / (2 * a);
                 std::cout << "Discriminant is strictly negative, the two complex solutions are:" << std::endl;
                 std::cout << realPart <<  " + " << imaginaryPart << " * i" << std::endl;
                 std::cout << realPart <<  " - " << imaginaryPart << " * i" << std::endl;
