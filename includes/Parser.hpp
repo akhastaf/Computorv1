@@ -86,10 +86,14 @@ namespace ft
                 try 
                 {
                     coefficient.second = Coefficients();
-                    _eat("*");
-                    _eat("X");
-                    _eat("^");
-                    coefficient.first = Power();
+                    if (_lookahead.type != "*") {
+                        coefficient.first = 0;
+                    } else {
+                        _eat("*");
+                        _eat("X");
+                        _eat("^");
+                        coefficient.first = Power();
+                    }
                 }
                 catch (std::string& e)
                 {
@@ -104,10 +108,14 @@ namespace ft
                 try 
                 {
                     coefficient.second = -1 * Coefficients();
-                    _eat("*");
-                    _eat("X");
-                    _eat("^");
-                    coefficient.first = Power();
+                    if (_lookahead.type != "*") {
+                        coefficient.first = 0;
+                    } else {
+                        _eat("*");
+                        _eat("X");
+                        _eat("^");
+                        coefficient.first = Power();
+                    }
                 }
                 catch (std::string& e)
                 {

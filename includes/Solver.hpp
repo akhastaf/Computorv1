@@ -96,6 +96,7 @@ namespace ft {
                 double imaginaryPart = std::sqrt(-delta) / (2 * a);
                 std::cout << "Discriminant is strictly negative, the two complex solutions are:" << std::endl;
                 std::cout << realPart <<  " + " << imaginaryPart << " * i" << std::endl;
+                std::cout << realPart <<  " - " << imaginaryPart << " * i" << std::endl;
             }
         }
     };
